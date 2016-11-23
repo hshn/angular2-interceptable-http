@@ -1,8 +1,9 @@
 {
   "name": "angular2-interceptable-http",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Angular2 Http interceptor",
   "main": "index.js",
+  "tyings": "index.d.ts",
   "scripts": {
     "build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -37,8 +38,8 @@
   },
   "files": [
     "README.md",
-    "src/**/*.js",
-    "src/**/*.map",
-    "src/**/*.ts.d"
+    "**/*.js",
+    "**/*.map",
+    "**/*.d.ts"
   ]
 }
