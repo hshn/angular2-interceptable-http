@@ -1,2 +1,2 @@
 export * from './interfaces';
-export { BaseUriInterceptor } from './base-uri';
+export { UriPrefixInterceptor } from './uri-prefix';

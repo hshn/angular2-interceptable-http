@@ -1,8 +1,8 @@
 import { InterceptorAdapter } from './interfaces';
 import { RequestArgs } from '../request';
 
-export class BaseUriInterceptor extends InterceptorAdapter {
-  constructor(private baseUri: string) {
+export class UriPrefixInterceptor extends InterceptorAdapter {
+  constructor(private prefix: string) {
     super()
   }
 
@@ -10,7 +10,7 @@ export class BaseUriInterceptor extends InterceptorAdapter {
     let { url, body, options } = request;
 
     return {
-      url: this.baseUri + url,
+      url: this.prefix + url,
       body,
       options
     }
