@@ -52,13 +52,11 @@ class InterceptableHttp extends Http {
   private intercept(fn: (request: RequestArgs) => Observable<Response>): (request: RequestArgs) => Observable<Response> {
     return request => {
       request = this.interceptors
-        .filter(interceptor => interceptor.request)
         .reduce((request, interceptor) => interceptor.request(request), request);
 
       let response = fn(request);
 
       return this.interceptors
-        .filter(interceptor => interceptor.response)
         .reduce((response, interceptor) => interceptor.response(response), response);
     }
   }
